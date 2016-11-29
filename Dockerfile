@@ -21,11 +21,13 @@ RUN	cd /usr/local/src && \
 	make install && \
 	mkdir /var/log/4store
 
+RUN 
+
 VOLUME /var/lib/4store
 
 COPY supervisor.conf /etc/supervisor/conf.d/
 
-EXPOSE 9000
+EXPOSE 80
 
 COPY run.sh /
 ENTRYPOINT [ "/run.sh" ]
