@@ -28,6 +28,7 @@ VOLUME /var/lib/4store
 COPY supervisor.conf /etc/supervisor/conf.d/
 
 EXPOSE 80
+EXPOSE 9000
 
 COPY run.sh /
 ENTRYPOINT [ "/run.sh" ]
