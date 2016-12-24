@@ -21,14 +21,15 @@ RUN	cd /usr/local/src && \
 	make install && \
 	mkdir /var/log/4store
 
-RUN 
-
 VOLUME /var/lib/4store
 
 COPY supervisor.conf /etc/supervisor/conf.d/
 
-EXPOSE 80
+# EXPOSE 80
 EXPOSE 8080
+
+RUN wget https://www.dropbox.com/s/92th9xaew01ewm2/apj_metadata.nt?dl=0 -O metadata.nt
+RUN wget https://www.dropbox.com/s/vhc2ampsjgawqrr/2016R3_rc1.rdf?dl=0 -O thesaurus.rdf
 
 COPY run.sh /
 ENTRYPOINT [ "/run.sh" ]
