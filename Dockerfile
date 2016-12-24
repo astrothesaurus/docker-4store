@@ -21,6 +21,8 @@ RUN	cd /usr/local/src && \
 	make install && \
 	mkdir /var/log/4store
 
+RUN apt-get -y install wget
+
 VOLUME /var/lib/4store
 
 COPY supervisor.conf /etc/supervisor/conf.d/
