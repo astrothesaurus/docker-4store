@@ -8,7 +8,7 @@ if [ ! -f /init-done ]; then
     4s-backend-setup default
     4s-backend default
 	4s-import default -fturtle -mhttp://data.iop.org/uat_review metadata.nt
-	4s-import default -mhttp://data.iop.org/thesaurus/2016R3 thesaurus.rdf
+	4s-import default -frdfxml -mhttp://data.iop.org/thesaurus/2016R3 thesaurus.rdf
     touch /init-done
 fi
 
