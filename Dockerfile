@@ -21,7 +21,7 @@ RUN	cd /usr/local/src && \
 	make install && \
 	mkdir /var/log/4store
 
-RUN apt-get -y install wget
+RUN apt-get -y install wget unzip
 
 VOLUME /var/lib/4store
 
