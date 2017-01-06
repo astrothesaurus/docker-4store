@@ -31,9 +31,10 @@ COPY supervisor.conf /etc/supervisor/conf.d/
 EXPOSE 8080
 
 RUN wget https://www.dropbox.com/sh/2fqy5hadj2r3etw/AAC7VnxQw6jfZ_r2bGV8Piaqa/2016R3.rdf?dl=0 -O thesaurus.rdf
-RUN wget https://www.dropbox.com/sh/2fqy5hadj2r3etw/AAAe8BnYR0jbyWgiw2JaiOvba/aas_metadata.zip?dl=0 -O metadata.zip
-RUN unzip metadata.zip && mv aas_metadata.nt metadata.nt
+# RUN wget https://www.dropbox.com/sh/2fqy5hadj2r3etw/AAAe8BnYR0jbyWgiw2JaiOvba/aas_metadata.zip?dl=0 -O metadata.zip
+# RUN unzip metadata.zip && mv aas_metadata.nt metadata.nt
 # RUN wget https://www.dropbox.com/s/92th9xaew01ewm2/apj_metadata.nt?dl=0 -O metadata.nt
+RUN wget https://www.dropbox.com/s/ow31fzysjzhfkmq/aas_metadata.nt?dl=0 -O metadata.nt
 # RUN wget https://www.dropbox.com/s/vhc2ampsjgawqrr/2016R3_rc1.rdf?dl=0 -O thesaurus.rdf
 
 COPY run.sh /
